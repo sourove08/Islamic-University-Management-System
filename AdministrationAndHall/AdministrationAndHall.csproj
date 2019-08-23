@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9099B92-184A-423A-8D67-774D09EAACAF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdministrationAndHall</RootNamespace>
+    <AssemblyName>AdministrationAndHall</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Administration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Administration.Designer.cs">
+      <DependentUpon>Administration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BasicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BasicForm.Designer.cs">
+      <DependentUpon>BasicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DatabaseBackupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DatabaseBackupForm.Designer.cs">
+      <DependentUpon>DatabaseBackupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmailValidation.cs" />
+    <Compile Include="UI\FreeSitsReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FreeSitsReports.Designer.cs">
+      <DependentUpon>FreeSitsReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordChange.Designer.cs">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\removeUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\removeUser.Designer.cs">
+      <DependentUpon>removeUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResidentialEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ResidentialEntry.Designer.cs">
+      <DependentUpon>ResidentialEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HallOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HallOperation.Designer.cs">
+      <DependentUpon>HallOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProvostEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProvostEntryForm.Designer.cs">
+      <DependentUpon>ProvostEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProvostList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProvostList.Designer.cs">
+      <DependentUpon>ProvostList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainReports.Designer.cs">
+      <DependentUpon>MainReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RestoreDatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RestoreDatabaseForm.Designer.cs">
+      <DependentUpon>RestoreDatabaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SearchResidentialStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SearchResidentialStudent.Designer.cs">
+      <DependentUpon>SearchResidentialStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StudentReports.Designer.cs">
+      <DependentUpon>StudentReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StudentModification.Designer.cs">
+      <DependentUpon>StudentModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StudentInformation.Designer.cs">
+      <DependentUpon>StudentInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TearchersEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TearchersEntry.Designer.cs">
+      <DependentUpon>TearchersEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\userCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\userCreateForm.Designer.cs">
+      <DependentUpon>userCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ResidentialStudentReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ResidentialStudentReports.Designer.cs">
+      <DependentUpon>ResidentialStudentReports.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Administration.resx">
+      <DependentUpon>Administration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BasicForm.resx">
+      <DependentUpon>BasicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DatabaseBackupForm.resx">
+      <DependentUpon>DatabaseBackupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FreeSitsReports.resx">
+      <DependentUpon>FreeSitsReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordChange.resx">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\removeUser.resx">
+      <DependentUpon>removeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResidentialEntry.resx">
+      <DependentUpon>ResidentialEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HallOperation.resx">
+      <DependentUpon>HallOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProvostEntryForm.resx">
+      <DependentUpon>ProvostEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProvostList.resx">
+      <DependentUpon>ProvostList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainReports.resx">
+      <DependentUpon>MainReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RestoreDatabaseForm.resx">
+      <DependentUpon>RestoreDatabaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SearchResidentialStudent.resx">
+      <DependentUpon>SearchResidentialStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StudentReports.resx">
+      <DependentUpon>StudentReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StudentModification.resx">
+      <DependentUpon>StudentModification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StudentInformation.resx">
+      <DependentUpon>StudentInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.BasicForm.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.Form1.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.HallFront.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.HallOperation.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.LoginForm.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.Properties.Resources.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.ProvostEntryForm.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.ProvostList.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.Reports.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.Search.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.SearchResultForm.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.StudentInformation.resources" />
+    <EmbeddedResource Include="bin\obj\x86\Debug\AdministrationAndHall.TearchersEntry.resources" />
+    <EmbeddedResource Include="UI\TearchersEntry.resx">
+      <DependentUpon>TearchersEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\userCreateForm.resx">
+      <DependentUpon>userCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\x86\Debug\AdministrationAndHall.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResidentialStudentReports.resx">
+      <DependentUpon>ResidentialStudentReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="bin\Debug\AdministrationAndHall.vshost.exe.manifest" />
+    <None Include="bin\obj\x86\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="bin\obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="bin\obj\x86\Debug\GenerateResource.read.1.tlog" />
+    <None Include="bin\obj\x86\Debug\GenerateResource.write.1.tlog" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Debug\GenerateResource.read.1.tlog" />
+    <None Include="obj\x86\Debug\GenerateResource.write.1.tlog" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AdministrationAndHall.exe" />
+    <Content Include="bin\Debug\AdministrationAndHall.pdb" />
+    <Content Include="bin\Debug\AdministrationAndHall.vshost.exe" />
+    <Content Include="bin\obj\x86\Debug\AdministrationAndHall.csproj.FileListAbsolute.txt" />
+    <Content Include="bin\obj\x86\Debug\AdministrationAndHall.exe" />
+    <Content Include="obj\x86\Debug\AdministrationAndHall.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\AdministrationAndHall.exe" />
+    <None Include="Resources\BackupDatabse.ico" />
+    <None Include="Resources\Backup Big.png" />
+    <None Include="Resources\Restore.ico" />
+    <None Include="Resources\Backup.ico" />
+    <None Include="Resources\Database.ico" />
+    <None Include="Resources\DatabaseBackup.ico" />
+    <None Include="Resources\Below Little.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\UserCreateIcon1.png" />
+    <None Include="Resources\UserDelete.png" />
+    <None Include="Resources\PasswordKey.png" />
+    <None Include="Resources\UserCreate1.png" />
+    <None Include="Resources\FormClose1.png" />
+    <None Include="Resources\UserCreateIcon.png" />
+    <None Include="Resources\UserCreate.png" />
+    <None Include="Resources\NewEntryBook1.png" />
+    <None Include="Resources\SearchLarge1.ico" />
+    <None Include="Resources\SearchWithCart.png" />
+    <None Include="Resources\FormClose.png" />
+    <None Include="Resources\ReportBook.png" />
+    <None Include="Resources\Previous.png" />
+    <None Include="Resources\Next.png" />
+    <None Include="Resources\SaveWhite.ico" />
+    <None Include="Resources\SearchLarge.ico" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Update.ico" />
+    <None Include="Resources\SearchWithMan.ico" />
+    <None Include="Resources\EditGood.ico" />
+    <None Include="Resources\NewEntryBook.png" />
+    <None Include="Resources\HallHasina.png" />
+    <None Include="Resources\ExitForm.png" />
+    <None Include="Resources\FolderGenuine.ico" />
+    <None Include="Resources\Show.png" />
+    <None Include="Resources\SohidMinar.png" />
+    <None Include="Resources\Hall.png" />
+    <None Include="Resources\MuktoMancha.png" />
+    <None Include="Resources\BanglaAndEnglishLogo.png" />
+    <None Include="Resources\LoginPicture.png" />
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\obj\x86\Debug\TempPE\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
